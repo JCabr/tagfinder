@@ -1,0 +1,278 @@
+/* Effectively same as dark.css, but with some colors swapped. */
+:root {
+    --wm-blue: #1A8DFF;
+    --dark-grey: #EEE;
+    --light-grey: #252626;
+    --error_red: #FF4444;
+  }
+  
+  * {
+    box-sizing: border-box;
+    font-family: "r_ansi", "Courier New";
+    font-weight: bold;
+  }
+      
+  body {
+    margin: 0;
+    background-color: var(--dark-grey);
+    overflow: auto;
+  }
+      
+  /* Style the header */
+  .header {
+    background-color: var(--wm-blue);
+    color: var(--dark-grey);
+    padding: 10px;
+    padding-left: 30px;
+    text-align: left;
+    font-family: "r_ansi", "Courier New";
+    font-size: 18px;
+    font-weight: bolder;
+  }
+  
+  /* Style the top navigation bar */
+  .topnav {
+    overflow: hidden;
+    background-color: var(--wm-blue);
+    border: 5px red;
+    font-family: r_ansi;
+  }
+  
+  a {
+    border: 5px red;
+    background-color: var(--dark-grey);
+  }
+  
+  /* Style the topnav links */
+  .topnav a {
+    float: left;
+    display: block;
+    color: var(--light-grey);
+    border: 2px solid var(--wm-blue);
+    border-top: none;
+    border-left: none;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    min-width: 25%;
+  }
+  
+  /* Change color on hover */
+  .topnav a:hover {
+    background-color: var(--wm-blue);
+    color: var(--dark-grey);
+  }
+  
+  /* Create three equal columns that floats next to each other */
+  .column {
+    float: left;
+    width: 33.33%;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  .style_icon.selected {
+    box-shadow: 0px 0px 10px var(--wm-blue);
+    border-radius: 40px;
+  }
+  
+  .docktag-barcode {
+    padding-right: 10px;
+    padding-bottom: 20px;
+    padding-left: 10px;
+    max-height: 200px;
+  }
+  
+  .docktag-barcode-label {
+    margin-bottom: 5px;
+    color: var(--wm-blue);
+    padding-left: 10px;
+  }
+  
+  label {
+    color: var(--wm-blue);
+  }
+  
+  input {
+    background: var(--dark-grey);
+    color: var(--light-grey);
+    border: 3px solid;
+    border-color: var(--wm-blue);
+    font-weight: bold;
+  }
+  
+  #input-label {
+    font-weight: bold;
+    font-size: 20px;
+    padding-left: 10px;
+  }
+  
+  #manifest-input {
+    margin-left: 10px;
+  }
+  
+  #search-button {
+    cursor: pointer;
+    background: var(--wm-blue);
+    color: var(--dark-grey);
+  }
+  #request-status-message {
+    margin-left: 10px;
+    transition: opacity 1s;
+  }
+  
+  .status-message-good {
+    color: var(--wm-blue);
+  }
+  
+  .status-message-bad {
+    color: var(--error_red);
+  }
+  
+  #output-column {
+    border: 2px solid var(--wm-blue);
+    border-bottom: none;
+    border-right: none;
+    border-top: none;
+    float: right;
+    overflow-y: scroll;
+    min-height: 84vh;
+    max-height: 84vh;
+    min-width: 50.1%;
+    max-width: 50.1%;
+    margin-top: 0px;
+    padding-top: 10px;
+  }
+  
+  #output-column::-webkit-scrollbar {
+      background-color: var(--dark-grey);
+  }
+  
+  #output-column::-webkit-scrollbar-thumb {
+      background-color: var(--wm-blue);
+  }
+  
+  #output-label {
+    font-weight: bold;
+    font-size: 20px;
+  }
+  
+  #history-label {
+    font-weight: bold;
+    font-size: 32px;
+    font-family: "r_ansi", "Courier New";
+    padding-left: 10px;
+    cursor: pointer;
+  }
+  
+  
+  #history-list {
+    padding-top: 10px;
+    overflow-y: scroll;
+    min-height: 64.1vh;
+    max-height: 64.1vh;
+    min-width: 49.9vw;
+    border: 2px solid var(--wm-blue);
+    border-width: 2px 0 0 0;
+    padding-left: 0px;
+  }
+  
+  .history-item {
+    padding-left: 10px;
+    padding-bottom: 20px;
+    font-size: 20px;
+  }
+  .history-item-success {
+    color: var(--wm-blue);
+  }
+  
+  .history-item-failure {
+    color: var(--light-grey);
+  }
+  
+  #history-list::-webkit-scrollbar {
+    background-color: var(--dark-grey);
+  }
+  
+  #history-list::-webkit-scrollbar-thumb {
+      background-color: var(--wm-blue);
+  }
+  
+  #csv-row {
+    float: left;
+  }
+  
+  #csv-label {
+    display: block;
+    padding-top: 20px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    font-size: 24px;
+    width: 50vw;
+    max-width: 50vw;
+    min-height: 100%;
+    max-height: 100%;
+    border-right: 2px solid var(--wm-blue);
+  }
+  
+  #csv-break {
+    width: 50vw;
+    max-width: 50vw;
+    height: 10px;
+    max-height: 10px;
+    border-right: 2px solid var(--wm-blue);
+  }
+  
+  #csv-input {
+    margin-left: 0px;
+    float: left;
+    width: 50vw;
+    height: 77.2vh;
+    box-sizing: border-box;
+    background-color: var(--dark-grey);
+    border: 2px solid var(--wm-blue);
+    border-bottom: none;
+    border-left: none;
+    color: var(--light-grey);
+  }
+  
+  #csv-input::-webkit-scrollbar {
+      background-color: var(--dark-grey);
+  }
+  
+  #csv-input::-webkit-scrollbar-thumb {
+      background-color: var(--wm-blue);
+  }
+  
+  .csv-output-manifest {
+    color: var(--wm-blue);
+    padding: 0px 0 20px 10px;
+    margin-top: 5px;
+    font-size: 32px;
+  }
+  
+  .csv-output-docktag {
+    font-size: 18px;
+    color: var(--light-grey);
+    padding: 0px 0 0px 50px;
+    margin-bottom: 20px;
+  }
+  
+  .csv-output-invalid {
+    color: var(--error_red);
+    padding: 10vh 0 20px 20vh;
+    margin-top: 5px;
+    font-size: 32px;
+  }
+  
+  /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+  @media screen and (max-width:600px) {
+    .column {
+    width: 100%;
+    }
+  }

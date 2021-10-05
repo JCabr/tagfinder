@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <!-- LIBRARY SCRIPTS -->
+  <script src='maybe.js'></script>
+  <!-- APPLICATION SCRIPTS -->
+  <script src='prelude.js'></script>
+  <script src='csv_data.js'></script>
+  <script src='history.js'></script>
+  <script src='main.js'></script>
+  <!--
+    Set href to 'dark.css' for dark theme,
+    or 'light.css' for light theme.
+  -->
+  <link rel='stylesheet' href='dark.css'>
+  <!--
+    Need to clean up code and make logic more robust before version
+    can be set to 1.0.0.
+  -->
+  <title>Docktag Finder v0.9.5</title>
+  <meta charset='utf-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+<body id='body'>
+  <div class='header'>
+    <h1>DOCKTAG FINDER</h1>
+  </div>
+
+  <div class='topnav'>
+    <a href='#MAIN' onclick='gotoMain()'>Main</a>
+    <a href='#CSV' onclick='gotoCSV()'>Data</a>
+  </div>
+
+  <div id='output-column' class='column'>
+  </div>
+
+  <div id='input-row'class='row'>
+    <div id='input-column' class='column'>
+      <br>
+      <label id='input-label' for='barcode-input'>Manifest</label>
+      <br>
+      <input id='manifest-input' type='text' name='data'
+        onkeypress="detectEnter()">
+      <input id='search-button' type='button' value='Get Docktags'
+        onclick='searchDocktags()'>
+      <br><br>
+      <label id='request-status-message'></label>
+      <br><br><br>
+      <label id='history-label' onclick='historyWipePrompt()'>History:</label>
+      <br><br>
+      <div id='history-list'></div>
+    </div>
+  </div>
+
+  <div id='csv-row' style='display: none'>
+    <label id='csv-label' for='csv-input'
+      onclick='csvWipePrompt()'>Docktag CSV Data:</label>
+    <div id='csv-break'></div>
+    <textarea id='csv-input' type='text' name='csv-input' cols='30' 
+      rows='40' onclick="csvUpdateSignal()"></textarea>
+  </div>
+
+</body>
+</html>
